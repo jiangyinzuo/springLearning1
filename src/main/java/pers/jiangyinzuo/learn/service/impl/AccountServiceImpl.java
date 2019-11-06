@@ -1,8 +1,8 @@
 package pers.jiangyinzuo.learn.service.impl;
 
 import pers.jiangyinzuo.learn.service.AccountService;
-import pers.jiangyinzuo.learn.service.dao.AccountDao;
-import pers.jiangyinzuo.learn.service.dao.impl.AccountDaoImpl;
+import pers.jiangyinzuo.learn.dao.AccountDao;
+import pers.jiangyinzuo.learn.dao.impl.AccountDaoImpl;
 
 public class AccountServiceImpl implements AccountService {
 

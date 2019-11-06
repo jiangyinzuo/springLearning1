@@ -1,6 +1,6 @@
-package pers.jiangyinzuo.learn.service.dao.impl;
+package pers.jiangyinzuo.learn.dao.impl;
 
-import pers.jiangyinzuo.learn.service.dao.AccountDao;
+import pers.jiangyinzuo.learn.dao.AccountDao;
 
 public class AccountDaoImpl implements AccountDao {
 

@@ -1,4 +1,4 @@
-package pers.jiangyinzuo.learn.service.dao;
+package pers.jiangyinzuo.learn.dao;
 
 public interface AccountDao {
     /**

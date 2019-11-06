@@ -1,4 +1,4 @@
-package pers.jiangyinzuo.learn.service.ui;
+package pers.jiangyinzuo.learn.ui;
 
 import pers.jiangyinzuo.learn.service.AccountService;
 import pers.jiangyinzuo.learn.service.impl.AccountServiceImpl;

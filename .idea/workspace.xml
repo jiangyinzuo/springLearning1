@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/ui/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/JDBCDemo.java" beforeDir="false" />
-    </list>
+    <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="ch02: couple" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +56,11 @@
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.service.ui.Client" />
+      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.ui.Client" />
       <module name="springLearning1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pers.jiangyinzuo.learn.service.ui.*" />
+          <option name="PATTERN" value="pers.jiangyinzuo.learn.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573045755870</updated>
-      <workItem from="1573045767648" duration="3637000" />
+      <workItem from="1573045767648" duration="3908000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -123,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573048809747</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ch02: couple">
+      <created>1573049682678</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573049682678</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ch01: decouple" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch01: decouple" />
+    <MESSAGE value="ch02: couple" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch02: couple" />
   </component>
 </project>
