@@ -2,53 +2,71 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- 将对象的创建交给Spring管理 -->
-    <!-- spring对bean的管理细节
-            1. 创建bean的三种方式
-            2. bean对象的作用范围
-            3. bean对象的生命周期
-     -->
 
-    <!-- 1. 使用默认构造方法创建
-            在spring配置文件中使用bean标签, 配以id和class属性后, 且没有其它属性和标签时,
-            采用的就是默认构造方法构造bean对象
+    <!-- spring中的依赖注入
+          依赖注入:
+                dependency injection
+          IOC的作用:
+                降低程序间的耦合(依赖关系)
+          依赖关系的管理:
+                交给spring维护
+          在当前类需要用到其它类的对象, 由spring为我们提供, 我们只需要在配置文件中说明
+          依赖关系的维护:
+                依赖注入
+                能注入的数据:
+                    1. 基本类型和String
+                    2. 其它bean类型(在配置文件中或者注解配置过的bean)
+                    3. 复杂类型/集合类型
+                注入的方式:
+                    1. 使用构造函数提供
+                    2. 使用set方法提供
+                    3. 使用注解提供
       -->
     <bean id="accountDao" class="pers.jiangyinzuo.learn.dao.impl.AccountDaoImpl"></bean>
 
-    <!-- 2. 使用普通工厂中的方法创建对象(使用某个类中的方法创建对象并存入spring容器) -->
-<!--    <bean id="instanceFactory" class="pers.jiangyinzuo.learn.factory.InstanceFactory"></bean>-->
-<!--    <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"></bean>-->
+    <!-- 一、构造方法注入:
+            使用constructor-arg
+            标签中的属性:
+                type: 用于指定要注入的数据类型, 该数据类型也是构造函数中某个或某些参数的类型
+                index: 用于指定要注入的数据给构造方法中指定索引位置的参数赋值, 索引位置从0开始
+                name: 用于指定给构造函数中指定名称的参数赋值 (常用)
+                ================ 以上3个用于指定给构造方法中哪个参数赋值 ==================
+                value: 用于提供基本类型和String类型的数据
+                ref: 用于指定其它的bean类型数据。它指的就是在spring IOC核心容器中出现过的bean对象
 
-    <!-- 3. 使用工厂中的静态方法创建对象(使用某个类中的静态方法创建对象)并存入spring容器 -->
-<!--    <bean id="accountService" class="pers.jiangyinzuo.learn.factory.StaticFactory" factory-method="getAccountService"></bean>-->
+            优势: 获取bean对象时, 注入数据是必须的操作, 否则对象无法创建成功。
+            弊端: 改变了bean对象的实例化方式, 使我们在创建对象时如果用不上这些数据也必须提供
+      -->
+<!--    <bean-->
+<!--            id="accountService"-->
+<!--            class="pers.jiangyinzuo.learn.service.impl.AccountServiceImpl"-->
+<!--            scope="singleton"-->
+<!--    >-->
+<!--        <constructor-arg name="name" value="你好"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="18"></constructor-arg>-->
+<!--        <constructor-arg name="birthday" ref="now"></constructor-arg>-->
+<!--    </bean>-->
 
-    <!-- bean作用范围
-         bean标签的scope属性: 用于指定bean的作用范围, 可以取值为(常用前两项):
-            singleton(单例, 默认值)
-            prototype(多例)
-            request(作用于web应用的请求范围)
-            session(作用于web应用的会话范围)
-            global-session(作用于集群环境的会话范围, 全局会话范围, 不是集群环境时就是session)
+    <!-- 配置一个日期对象 -->
+    <bean id="now" class="java.util.Date"></bean>
+
+    <!-- 二、set方法注入 (更常用)
+        使用property标签
+        出现在bean标签内部
+        标签的属性:
+            name: 用于指定注入时所调用的set方法名称
+            value: 用于提供基本类型和String类型的数据
+            ref: 用于指定其它的bean类型数据。它指的就是在spring IOC核心容器中出现过的bean对象
+        优势: 创建对象时没有明确限制, 可以直接使用默认构造函数
+        弊端: 如果有某个成员必须有值, 则获取对象时有可能set方法没有执行。
       -->
     <bean
             id="accountService"
             class="pers.jiangyinzuo.learn.service.impl.AccountServiceImpl"
             scope="singleton"
-            init-method="initMethod"
-            destroy-method="destroyMethod"
-    ></bean>
-
-    <!-- bean对象的生命周期
-         单例对象
-            出生: 当容器创建时, 对象出生;
-            活着: 容器活着, 对象活着;
-            消亡: 容器消亡, 对象消亡
-         总结: 单例对象生命周期和容器相同
-
-         多例对象
-            出生: 使用对象时创建对象;
-            活着: 对象只要是在使用过程中就一直活着;
-            消亡: 当对象长时间不用, 且没有别的对象引入时, 由Java垃圾回收器回收(spring不知道)
-      -->
-
+    >
+        <property name="name" value="Alice"></property>
+        <property name="birthday" ref="now"></property>
+        <property name="age" value="22"></property>
+    </bean>
 </beans>
