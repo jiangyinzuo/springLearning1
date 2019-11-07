@@ -27,7 +27,6 @@ public class Client {
         // 获取Spring的IOC核心容器, 并根据id获取对象
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
 
-        AccountService accountService1 = (AccountService) applicationContext.getBean("accountService");
         AccountService accountService = (AccountService) applicationContext.getBean("accountService");
         AccountDao accountDao = (AccountDao) applicationContext.getBean("accountDao");
 
@@ -35,18 +34,6 @@ public class Client {
         System.out.println(accountDao);
 
         accountService.saveAccount();
-        System.out.println(accountService1 == accountService);
-
-        applicationContext.close();
-
-//        Resource resource = new ClassPathResource("bean.xml");
-//        BeanFactory beanFactory = new XmlBeanFactory(resource);
-//
-//        AccountService accountService1 = (AccountService) beanFactory.getBean("accountService");
-//        AccountDao accountDao1 = (AccountDao) beanFactory.getBean("accountDao");
-//
-//        System.out.println(accountService1);
-//        System.out.println(accountDao1);
 
     }
 }

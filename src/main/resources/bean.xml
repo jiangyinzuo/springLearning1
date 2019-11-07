@@ -60,13 +60,53 @@
         优势: 创建对象时没有明确限制, 可以直接使用默认构造函数
         弊端: 如果有某个成员必须有值, 则获取对象时有可能set方法没有执行。
       -->
+
+    <!-- 三、复杂类型的注入/集合类型的注入
+        用于给List结构注入的标签有: list array set
+        用于给Map结构注入的标签有: map props
+        结构相同, 标签可以互换
+      -->
     <bean
             id="accountService"
             class="pers.jiangyinzuo.learn.service.impl.AccountServiceImpl"
             scope="singleton"
     >
-        <property name="name" value="Alice"></property>
-        <property name="birthday" ref="now"></property>
-        <property name="age" value="22"></property>
+        <property name="myStr">
+            <array>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </array>
+        </property>
+
+        <property name="myList">
+            <list>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </list>
+        </property>
+
+        <property name="mySet">
+            <set>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </set>
+        </property>
+
+        <property name="myMap">
+            <map>
+                <entry key="testA" value="AAA"></entry>
+                <entry key="testB" value="BBB"></entry>
+            </map>
+        </property>
+
+        <property name="myProp">
+            <props>
+                <prop key="testC">ccc</prop>
+                <prop key="testD">ddd</prop>
+            </props>
+        </property>
     </bean>
 </beans>

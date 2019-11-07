@@ -3,43 +3,42 @@ package pers.jiangyinzuo.learn.service.impl;
 import pers.jiangyinzuo.learn.service.AccountService;
 import pers.jiangyinzuo.learn.dao.AccountDao;
 
-import java.util.Date;
+import java.util.*;
 
 public class AccountServiceImpl implements AccountService {
 
-    // 经常变化的数据不适用于依赖注入
-    private String name;
-    private Integer age;
-    private Date birthday;
+    private String[] myStr;
+    private List<String> myList;
+    private Set<String> mySet;
+    private Map<String, String> myMap;
+    private Properties myProp;
 
-    private static AccountDao accountDao;
-
-    public AccountServiceImpl() {}
-
-    public AccountServiceImpl(String name, Integer age, Date birthday) {
-        this.name = name;
-        this.age = age;
-        this.birthday = birthday;
+    public void setMyStr(String[] myStr) {
+        this.myStr = myStr;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMyList(List<String> myList) {
+        this.myList = myList;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setMySet(Set<String> mySet) {
+        this.mySet = mySet;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setMyMap(Map<String, String> myMap) {
+        this.myMap = myMap;
     }
 
-    public static void setAccountDao(AccountDao accountDao) {
-        AccountServiceImpl.accountDao = accountDao;
+    public void setMyProp(Properties myProp) {
+        this.myProp = myProp;
     }
 
     @Override
     public void saveAccount() {
-        System.out.println("存钱" + name + age + birthday);
+        System.out.println(Arrays.toString(myStr));
+        System.out.println(myList);
+        System.out.println(myMap);
+        System.out.println(mySet);
+        System.out.println(myProp);
     }
 }
