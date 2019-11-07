@@ -16,4 +16,12 @@ public class AccountServiceImpl implements AccountService {
     public void saveAccount() {
         System.out.println("存钱");
     }
+
+    public void initMethod() {
+        System.out.println("init");
+    }
+
+    public void destroyMethod() {
+        System.out.println("destroy");
+    }
 }
