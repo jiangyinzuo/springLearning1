@@ -33,6 +33,8 @@ public class Client {
         System.out.println(accountService);
         System.out.println(accountDao);
 
+        accountService.saveAccount();
+
 //        Resource resource = new ClassPathResource("bean.xml");
 //        BeanFactory beanFactory = new XmlBeanFactory(resource);
 //

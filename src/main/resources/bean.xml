@@ -3,6 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 将对象的创建交给Spring管理 -->
-    <bean id="accountService" class="pers.jiangyinzuo.learn.service.impl.AccountServiceImpl"></bean>
+    <!-- spring对bean的管理细节
+            1. 创建bean的三种方式
+            2. bean对象的作用范围
+            3. bean对象的生命周期
+     -->
+
+    <!-- 1. 使用默认构造方法创建
+            在spring配置文件中使用bean标签, 配以id和class属性后, 且没有其它属性和标签时,
+            采用的就是默认构造方法构造bean对象
+      -->
     <bean id="accountDao" class="pers.jiangyinzuo.learn.dao.impl.AccountDaoImpl"></bean>
+
+    <!-- 2. 使用普通工厂中的方法创建对象(使用某个类中的方法创建对象并存入spring容器) -->
+<!--    <bean id="instanceFactory" class="pers.jiangyinzuo.learn.factory.InstanceFactory"></bean>-->
+<!--    <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"></bean>-->
+
+    <!-- 3. 使用工厂中的静态方法创建对象(使用某个类中的静态方法创建对象)并存入spring容器 -->
+    <bean id="accountService" class="pers.jiangyinzuo.learn.factory.StaticFactory" factory-method="getAccountService"></bean>
 </beans>
