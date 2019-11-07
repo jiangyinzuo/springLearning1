@@ -6,8 +6,13 @@ import pers.jiangyinzuo.learn.service.impl.AccountServiceImpl;
 
 public class Client {
     public static void main(String[] args) {
-        // AccountService accountService = new AccountServiceImpl();
-        AccountService accountService = (AccountService) BeanFactory.getBean("accountService");
-        accountService.saveAccount();
+
+        // 多例输出都是1; 单例输出123
+        for (int i = 0; i < 3; ++i) {
+            // AccountService accountService = new AccountServiceImpl();
+            AccountService accountService = (AccountServiceImpl) BeanFactory.getBean("accountService");
+            accountService.saveAccount();
+        }
+
     }
 }
