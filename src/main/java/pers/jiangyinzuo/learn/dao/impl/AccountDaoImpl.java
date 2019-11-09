@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import pers.jiangyinzuo.learn.dao.AccountDao;
 import pers.jiangyinzuo.learn.domain.Account;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,6 +16,7 @@ import java.util.List;
 @Repository("accountDao")
 public class AccountDaoImpl implements AccountDao {
 
+    @Resource(name = "queryRunner")
     private QueryRunner runner;
 
     @Override
