@@ -3,7 +3,8 @@ package pers.jiangyinzuo.learn.test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import pers.jiangyinzuo.learn.config.SpringConfiguration;
 import pers.jiangyinzuo.learn.domain.Account;
 import pers.jiangyinzuo.learn.service.AccountService;
 
@@ -22,7 +23,7 @@ public class AccountServiceTest {
     @BeforeAll
     public static void setUp() {
         // 1. 获取容器
-        applicationContext = new ClassPathXmlApplicationContext("bean.xml");
+        applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 
         // 2. 得到业务层对象
         accountService = applicationContext.getBean("accountService", AccountService.class);

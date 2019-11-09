@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/SpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/JDBCConfig.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/QueryRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -69,6 +75,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pers.jiangyinzuo.learn" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\stuspace\java\springLearning\springLearning1\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,6 +93,19 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.AccountServiceTest">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.ui.Client" />
+      <module name="springLearning1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pers.jiangyinzuo.learn.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springLearning1" />
       <extension name="coverage">
@@ -99,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountServiceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountServiceTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springLearning1" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +131,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="pers.jiangyinzuo.learn.test" />
       <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testDelete" />
+      <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountServiceTest.testFindOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springLearning1" />
       <extension name="coverage">
         <pattern>
@@ -124,14 +146,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pers.jiangyinzuo.learn.test" />
-      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testFindOne" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.QueryRunnerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountServiceTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryRunnerTest.testQueryRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springLearning1" />
       <extension name="coverage">
         <pattern>
@@ -140,43 +161,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pers.jiangyinzuo.learn.test" />
-      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testSave" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountServiceTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springLearning1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pers.jiangyinzuo.learn.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pers.jiangyinzuo.learn.test" />
-      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.AccountServiceTest" />
-      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="MAIN_CLASS_NAME" value="pers.jiangyinzuo.learn.test.QueryRunnerTest" />
+      <option name="METHOD_NAME" value="testQueryRunner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AccountServiceTest.testFindOne" />
       <item itemvalue="JUnit.AccountServiceTest" />
-      <item itemvalue="JUnit.AccountServiceTest.testSave" />
-      <item itemvalue="JUnit.AccountServiceTest.testUpdate" />
-      <item itemvalue="JUnit.AccountServiceTest.testDelete" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="JUnit.QueryRunnerTest" />
+      <item itemvalue="JUnit.QueryRunnerTest.testQueryRunner" />
+      <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AccountServiceTest" />
-        <item itemvalue="JUnit.AccountServiceTest.testDelete" />
-        <item itemvalue="JUnit.AccountServiceTest.testSave" />
-        <item itemvalue="JUnit.AccountServiceTest.testFindOne" />
-        <item itemvalue="JUnit.AccountServiceTest.testUpdate" />
+        <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
+        <item itemvalue="JUnit.QueryRunnerTest.testQueryRunner" />
+        <item itemvalue="JUnit.QueryRunnerTest" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +198,7 @@
       <workItem from="1573045767648" duration="8507000" />
       <workItem from="1573092456005" duration="22383000" />
       <workItem from="1573212967483" duration="4756000" />
-      <workItem from="1573266472935" duration="10101000" />
+      <workItem from="1573266472935" duration="15747000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -279,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573280180123</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ch07: IOC based on annotation">
+      <created>1573280945931</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573280945931</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +321,7 @@
     <MESSAGE value="ch05: life circle of spring bean" />
     <MESSAGE value="ch06: spring annotations" />
     <MESSAGE value="ch07: junit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch07: junit test" />
+    <MESSAGE value="ch07: IOC based on annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch07: IOC based on annotation" />
   </component>
 </project>
