@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,6 +193,7 @@
       <workItem from="1573092456005" duration="22383000" />
       <workItem from="1573212967483" duration="4756000" />
       <workItem from="1573266472935" duration="16828000" />
+      <workItem from="1573301625252" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -291,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573288557683</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ch08: Java-based Container Configuration">
+      <created>1573301673674</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573301673674</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
