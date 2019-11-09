@@ -3,11 +3,13 @@ package pers.jiangyinzuo.learn.service.impl;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import pers.jiangyinzuo.learn.dao.AccountDao;
+import pers.jiangyinzuo.learn.domain.Account;
 import pers.jiangyinzuo.learn.service.AccountService;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
+import java.util.List;
 
 
 /**
@@ -72,9 +74,12 @@ public class AccountServiceImpl implements AccountService {
     @Resource(name = "accountDao")
     private AccountDao accountDao;
 
-    @Override
-    public void saveAccount() {
-        accountDao.saveAccount();
+    public AccountDao getAccountDao() {
+        return accountDao;
+    }
+
+    public void setAccountDao(AccountDao accountDao) {
+        this.accountDao = accountDao;
     }
 
     @PostConstruct
@@ -85,5 +90,30 @@ public class AccountServiceImpl implements AccountService {
     @PreDestroy
     public void destroy() {
         System.out.println("destroy");
+    }
+
+    @Override
+    public List<Account> findAllAccounts() {
+        return accountDao.findAllAccounts();
+    }
+
+    @Override
+    public Account findAccountById(Integer accountId) {
+        return accountDao.findAccountById(accountId);
+    }
+
+    @Override
+    public void saveAccount(Account account) {
+        accountDao.saveAccount(account);
+    }
+
+    @Override
+    public void updateAccount(Account account) {
+        accountDao.updateAccount(account);
+    }
+
+    @Override
+    public void deleteAccount(Integer accountId) {
+        accountDao.deleteAccount(accountId);
     }
 }

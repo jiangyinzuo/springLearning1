@@ -15,11 +15,5 @@ public class Client {
         AccountService accountService2 = (AccountService) applicationContext.getBean("accountService");
         AccountDao accountDao = (AccountDao) applicationContext.getBean("accountDao");
 
-        System.out.println(accountService);
-        System.out.println(accountDao);
-
-        accountService.saveAccount();
-        System.out.println(accountService == accountService2);
-        applicationContext.close();
     }
 }
