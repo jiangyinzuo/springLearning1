@@ -1,9 +1,10 @@
 package pers.jiangyinzuo.learn.test;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pers.jiangyinzuo.learn.domain.Account;
 import pers.jiangyinzuo.learn.service.AccountService;
 
@@ -14,19 +15,22 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * 使用Junit进行单元测试
+ *
+ * 测试方法执行时, 没有IOC容器
+ * Spring integrate junit
+ *      1. 使用Junit提供的注解将原有的main方法替换为Spring提供的方法
+ *      2. 告知spring运行器IOC是如何创建的, 并说明位置
+ *          @ContextConfiguration
+ *              location: xml文件位置, 加上classpath关键字, 表示在类路径下
+ *              classes: 指定注解类所在的位置
+ *      使用spring5.x版本时, 要求junit版本是4.1.2以上
  */
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(locations = "classpath:bean.xml")
 public class AccountServiceTest {
-    private static ApplicationContext applicationContext;
-    private static AccountService accountService;
 
-    @BeforeAll
-    public static void setUp() {
-        // 1. 获取容器
-        applicationContext = new ClassPathXmlApplicationContext("bean.xml");
-
-        // 2. 得到业务层对象
-        accountService = applicationContext.getBean("accountService", AccountService.class);
-    }
+    @Autowired
+    private AccountService accountService;
 
     @Test
     public void testFindAll() {
@@ -35,7 +39,6 @@ public class AccountServiceTest {
         List<Account> accountList = accountService.findAllAccounts();
 
         assertTrue(accountList.size() > 0, "列表长度小于0");
-
     }
 
     @Test
