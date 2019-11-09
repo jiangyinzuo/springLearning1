@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" afterDir="false" />
@@ -27,6 +29,10 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -133,7 +139,9 @@
       <option name="presentableId" value="Default" />
       <updated>1573045755870</updated>
       <workItem from="1573045767648" duration="8507000" />
-      <workItem from="1573092456005" duration="19610000" />
+      <workItem from="1573092456005" duration="22383000" />
+      <workItem from="1573212967483" duration="4756000" />
+      <workItem from="1573266472935" duration="1164000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -198,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573128735644</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ch05: life circle of spring bean">
+      <created>1573129705635</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573129705635</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
