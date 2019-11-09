@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/SpringConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/JDBCConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/QueryRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/ui/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/config/JDBCConfig.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +162,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AccountServiceTest" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="JUnit.AccountServiceTest" />
       <item itemvalue="JUnit.QueryRunnerTest" />
       <item itemvalue="JUnit.QueryRunnerTest.testQueryRunner" />
       <item itemvalue="JUnit.AccountServiceTest.testFindAll" />
@@ -198,7 +191,7 @@
       <workItem from="1573045767648" duration="8507000" />
       <workItem from="1573092456005" duration="22383000" />
       <workItem from="1573212967483" duration="4756000" />
-      <workItem from="1573266472935" duration="15747000" />
+      <workItem from="1573266472935" duration="16828000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -291,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573280945931</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ch08: Java-based Container Configuration">
+      <created>1573288557683</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573288557683</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +322,7 @@
     <MESSAGE value="ch06: spring annotations" />
     <MESSAGE value="ch07: junit test" />
     <MESSAGE value="ch07: IOC based on annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch07: IOC based on annotation" />
+    <MESSAGE value="ch08: Java-based Container Configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch08: Java-based Container Configuration" />
   </component>
 </project>

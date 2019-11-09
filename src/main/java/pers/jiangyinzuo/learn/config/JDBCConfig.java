@@ -2,9 +2,9 @@ package pers.jiangyinzuo.learn.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.commons.dbutils.QueryRunner;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 
 import javax.sql.DataSource;
@@ -36,7 +36,7 @@ public class JDBCConfig {
      */
     @Bean(name = "queryRunner")
     @Scope("prototype")
-    public QueryRunner createQueryRunner(DataSource dataSource) {
+    public QueryRunner createQueryRunner(@Qualifier("dataSource") DataSource dataSource) {
         return new QueryRunner(dataSource);
     }
 
