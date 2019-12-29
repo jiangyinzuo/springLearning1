@@ -7,10 +7,12 @@ import org.springframework.stereotype.Repository;
 import pers.jiangyinzuo.learn.dao.AccountDao;
 import pers.jiangyinzuo.learn.domain.Account;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
  * 账户的持久层实现类
+ * @author Jiang Yinzuo
  */
 @Repository("accountDao")
 public class AccountDaoImpl implements AccountDao {
@@ -61,6 +63,23 @@ public class AccountDaoImpl implements AccountDao {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Account queryAccountByName(String name) throws RuntimeException {
+        try {
+            List<Account> accounts = runner.query("SELECT * FROM `account` WHERE `name` = ?",
+                    new BeanListHandler<Account>(Account.class), name);
+            if (accounts == null || accounts.isEmpty()) {
+                return null;
+            } else if (accounts.size() > 1) {
+                throw  new RuntimeException("结果集不唯一，数据有问题");
+            }
+            return accounts.get(0);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void setRunner(QueryRunner runner) {

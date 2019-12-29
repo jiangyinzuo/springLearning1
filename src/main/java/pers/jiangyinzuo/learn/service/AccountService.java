@@ -33,4 +33,12 @@ public interface AccountService {
      * 删除
      */
     void deleteAccount(Integer accountId);
+
+    /**
+     * 转账
+     * @param sourceName  转出账户名
+     * @param targetName  转入账户名
+     * @param money       转账金额
+     */
+    void transfer(String sourceName, String targetName, Float money);
 }

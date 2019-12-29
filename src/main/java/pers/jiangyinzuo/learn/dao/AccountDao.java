@@ -36,4 +36,11 @@ public interface AccountDao {
      * 删除
      */
     void deleteAccount(Integer accountId);
+
+    /**
+     * 根据名称查询账户
+     * @param name 账户名
+     * @return 有唯一的结果就返回，没有就返回null，超过一个抛异常
+     */
+    Account queryAccountByName(String name) throws RuntimeException;
 }

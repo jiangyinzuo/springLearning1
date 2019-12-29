@@ -116,4 +116,14 @@ public class AccountServiceImpl implements AccountService {
     public void deleteAccount(Integer accountId) {
         accountDao.deleteAccount(accountId);
     }
+
+    @Override
+    public void transfer(String sourceName, String targetName, Float money) {
+        Account sourceAccount = accountDao.queryAccountByName(sourceName);
+        Account targetAccount = accountDao.queryAccountByName(targetName);
+        sourceAccount.setMoney(sourceAccount.getMoney() + money);
+        targetAccount.setMoney(targetAccount.getMoney() - money);
+        accountDao.updateAccount(sourceAccount);
+        accountDao.updateAccount(targetAccount);
+    }
 }
