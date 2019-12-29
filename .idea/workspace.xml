@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc0a01a-4d68-4547-9c9e-db8df388cfe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/springLearning1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/jiangyinzuo/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pers/jiangyinzuo/learn/test/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +60,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -209,7 +198,7 @@
       <workItem from="1573212967483" duration="4756000" />
       <workItem from="1573266472935" duration="16828000" />
       <workItem from="1573301625252" duration="2769000" />
-      <workItem from="1577597849764" duration="1553000" />
+      <workItem from="1577597849764" duration="1795000" />
     </task>
     <task id="LOCAL-00001" summary="ch01: decouple">
       <created>1573048809747</created>
@@ -323,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573306415046</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="添加转账方法，演示事务问题">
+      <created>1577599608275</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1577599608275</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,16 +352,21 @@
     <MESSAGE value="ch07: IOC based on annotation" />
     <MESSAGE value="ch08: Java-based Container Configuration" />
     <MESSAGE value="ch09: Spring integrates JUnit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ch09: Spring integrates JUnit" />
+    <MESSAGE value="添加转账方法，演示事务问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加转账方法，演示事务问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1577599235437">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="526" y="171" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1577599235437" />
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1577599555947">
+    <state x="298" y="48" key="CommitChangelistDialog2" timestamp="1577599607186">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1577599555947" />
+    <state x="298" y="48" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1577599607186" />
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1577599627404">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1577599627404" />
   </component>
 </project>
